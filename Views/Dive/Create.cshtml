@@ -1,0 +1,63 @@
+﻿@model Scuba_Dive_Log.Models.Dive
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Dive</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="DiveSite" class="control-label"></label>
+                <input asp-for="DiveSite" class="form-control" />
+                <span asp-validation-for="DiveSite" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DiveDate" class="control-label"></label>
+                <input asp-for="DiveDate" class="form-control" />
+                <span asp-validation-for="DiveDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DiveBuddy" class="control-label"></label>
+                <input asp-for="DiveBuddy" class="form-control" />
+                <span asp-validation-for="DiveBuddy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DiveType" class="control-label"></label>
+                <select class="form-control" id="DiveType" name="DiveType">
+    <option>Select Dive Type</option> 
+    <option>Shore</option> 
+    <option>Boat</option> 
+    <option>Other</option> 
+</select>
+                <span asp-validation-for="DiveType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MaxDepth" class="control-label"></label>
+                <input asp-for="MaxDepth" class="form-control" />
+                <span asp-validation-for="MaxDepth" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DiveTime" class="control-label"></label>
+                <input asp-for="DiveTime" class="form-control" />
+                <span asp-validation-for="DiveTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

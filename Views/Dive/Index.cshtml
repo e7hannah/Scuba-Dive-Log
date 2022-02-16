@@ -1,0 +1,65 @@
+﻿@model IEnumerable<Scuba_Dive_Log.Models.Dive>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DiveSite)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DiveDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DiveBuddy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DiveType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaxDepth)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DiveTime)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DiveSite)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DiveDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DiveBuddy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DiveType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaxDepth)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DiveTime)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
