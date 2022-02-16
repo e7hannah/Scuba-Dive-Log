@@ -30,7 +30,12 @@
             </div>
             <div class="form-group">
                 <label asp-for="DiveType" class="control-label"></label>
-                <select asp-for="DiveType" class="form-control"></select>
+                 <select class="form-control" id="DiveType" name="DiveType">
+                  <option>Select Dive Type</option> 
+                    <option>Shore</option> 
+                    <option>Boat</option> 
+                    <option>Other</option> 
+                </select>
                 <span asp-validation-for="DiveType" class="text-danger"></span>
             </div>
             <div class="form-group">
