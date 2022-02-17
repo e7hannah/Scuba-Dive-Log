@@ -29,7 +29,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="DiveType" class="control-label"></label>
-                <select class="form-control" id="DiveType" name="DiveType">
+                <select class="form-control" id="DiveType" name="Dive Type">
                   <option>Select Dive Type</option> 
                     <option>Shore</option> 
                     <option>Boat</option> 
@@ -47,6 +47,116 @@
                 <input asp-for="DiveTime" class="form-control" />
                 <span asp-validation-for="DiveTime" class="text-danger"></span>
             </div>
+            <div class="form-group">
+                <label asp-for="WaterType" class="control-label"></label>
+                <select class="form-control" id="WaterType" name="WaterType">
+                  <option>Select Water Type</option> 
+                    <option>Salt</option> 
+                    <option>Fresh</option> 
+                </select>
+                <span asp-validation-for="WaterType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BodyOfWater" class="control-label"></label>
+                <select class="form-control" id="BodyOfWater" name="BodyOfWater">
+                  <option>Select Body of Water</option> 
+                    <option>Ocean</option> 
+                    <option>Lake</option> 
+                    <option>Quarry</option> 
+                    <option>River</option> 
+                    <option>Other</option> 
+                </select>
+                <span asp-validation-for="BodyOfWater" class="text-danger"></span>
+             </div>
+             <div class="form-group">
+                <label asp-for="Weather" class="control-label"></label>
+                <select class="form-control" id="Weather" name="Weather">
+                  <option>Select Weather</option> 
+                    <option>Sunny</option> 
+                    <option>Partly Cloudy</option> 
+                    <option>Cloudy</option> 
+                    <option>Rainy</option> 
+                    <option>Windy</option> 
+                    <option>Foggy</option> 
+                </select>
+                <span asp-validation-for="Weather" class="text-danger"></span>
+             </div>
+             <div class="form-group">
+                <label asp-for="WaterTemperature" class="control-label"></label>
+                <input asp-for="WaterTemperature" class="form-control" />
+                <span asp-validation-for="WaterTemperature" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Visibility" class="control-label"></label>
+                <input asp-for="Visibility" class="form-control" />
+                <span asp-validation-for="Visibility" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Waves" class="control-label"></label>
+                <select class="form-control" id="Waves" name="Waves">
+                  <option>Select Wave Conditions</option> 
+                    <option>None</option> 
+                    <option>Small</option> 
+                    <option>Medium</option> 
+                    <option>Large</option> 
+                </select>
+                <span asp-validation-for="Waves" class="text-danger"></span>
+             </div>
+             <div class="form-group">
+                <label asp-for="Current" class="control-label"></label>
+                <select class="form-control" id="Current" name="Current">
+                  <option>Select Water Current Conditions</option> 
+                    <option>None</option> 
+                    <option>Light</option> 
+                    <option>Medium</option> 
+                    <option>Heavy</option> 
+                </select>
+                <span asp-validation-for="Current" class="text-danger"></span>
+             </div>
+             <div class="form-group">
+                <label asp-for="Surge" class="control-label"></label>
+                <select class="form-control" id="Surge" name="Surge">
+                  <option>Select Surge Conditions</option> 
+                    <option>Light</option> 
+                    <option>Medium</option> 
+                    <option>Heavy</option> 
+                </select>
+                <span asp-validation-for="Surge" class="text-danger"></span>
+             </div>
+              <div class="form-group">
+                <label asp-for="SuitType" class="control-label"></label>
+                <input asp-for="SuitType" class="form-control" />
+                <span asp-validation-for="SuitType" class="text-danger"></span>
+            </div>
+             <div class="form-group">
+                <label asp-for="Weight" class="control-label"></label>
+                <input asp-for="Weight" class="form-control" />
+                <span asp-validation-for="Weight" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Weighting" class="control-label"></label>
+                <select class="form-control" id="Weighting" name="Weighting">
+                  <option>Select Weighting</option> 
+                    <option>Light</option> 
+                    <option>Good</option> 
+                    <option>Heavy</option> 
+                </select>
+                <span asp-validation-for="Weighting" class="text-danger"></span>
+             </div>
+             <div class="form-group">
+                <label asp-for="CylinderType" class="control-label"></label>
+                <select class="form-control" id="CylinderType" name="CylinderType">
+                  <option>Select Cylinder Type</option> 
+                    <option>Steel</option> 
+                    <option>Aluminum</option> 
+                    <option>Other</option> 
+                </select>
+                <span asp-validation-for="CylinderType" class="text-danger"></span>
+             </div>
+
+               <br />
+
+
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
