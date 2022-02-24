@@ -55,8 +55,9 @@ namespace Scuba_Dive_Log.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,DiveSite,DiveDate,DiveBuddy,DiveType,MaxDepth,DiveTime")] Dive dive)
+        public async Task<IActionResult> Create([Bind("Id,DiveSite,DiveDate,DiveBuddy,DiveType,MaxDepth,DiveTime,WaterType,BodyOfWater,Weather,WaterTemperature,Visibility,Waves,Current,Surge,SuitType,Weight,Weighting,CylinderType")] Dive dive)
         {
+
             if (ModelState.IsValid)
             {
                 dive.Id = Guid.NewGuid();
@@ -88,7 +89,7 @@ namespace Scuba_Dive_Log.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(Guid id, [Bind("Id,DiveSite,DiveDate,DiveBuddy,DiveType,MaxDepth,DiveTime")] Dive dive)
+        public async Task<IActionResult> Edit(Guid id, [Bind("Id,DiveSite,DiveDate,DiveBuddy,DiveType,MaxDepth,DiveTime,WaterType,BodyOfWater,Weather,WaterTemperature,Visibility,Waves,Current,Surge,SuitType,Weight,Weighting,CylinderType")] Dive dive)
         {
             if (id != dive.Id)
             {

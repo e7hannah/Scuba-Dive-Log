@@ -71,7 +71,7 @@ namespace Scuba_Dive_Log.Models
         { get; set; }
 
         [Display(Name = "Suit Type")]
-        public string? SuitType
+        public string SuitType
         { get; set; }
 
         [Display(Name = "Weight (lbs)")]
